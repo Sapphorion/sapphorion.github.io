@@ -153,7 +153,25 @@
 
   .hero-inner {
     position: relative;
-    max-width: 680px;
+    max-width: 1040px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-copy { max-width: 680px; }
+
+  .hero-phoenix {
+    width: min(340px, 32vw);
+    height: auto;
+    justify-self: end;
+    filter: drop-shadow(0 16px 50px rgba(74, 127, 181, 0.28));
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner { display: block; max-width: 680px; }
+    .hero-phoenix { display: none; }
   }
 
   h1 {
@@ -466,13 +484,16 @@
 <section class="hero">
   <div class="blueprint-grid" aria-hidden="true"></div>
   <div class="wrap hero-inner">
-    <div class="eyebrow">Gqeberha, South Africa</div>
-    <h1>Websites for South African <em>small businesses</em></h1>
-    <p class="hero-sub">Clean, fast, honest websites — built locally, priced fairly. No templates dressed up as custom work, no invoices you didn't see coming.</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="#contact">Get a Quote →</a>
-      <span class="hero-note">Sites from R2,500</span>
+    <div class="hero-copy">
+      <div class="eyebrow">Gqeberha, South Africa</div>
+      <h1>Websites for South African <em>small businesses</em></h1>
+      <p class="hero-sub">Clean, fast, honest websites — built locally, priced fairly. No templates dressed up as custom work, no invoices you didn't see coming.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Get a Quote →</a>
+        <span class="hero-note">Sites from R2,500</span>
+      </div>
     </div>
+    <img src="images/phoenix.png" alt="" class="hero-phoenix">
   </div>
 </section>
 
@@ -557,8 +578,8 @@
       <h2>Let's build something</h2>
       <p>Have a project in mind? Reach out — I usually reply within a day.</p>
       <div class="contact-buttons">
-        <a class="btn-primary" href="https://wa.me/27000000000" target="_blank" rel="noopener">WhatsApp Me →</a>
-        <a class="btn-outline" href="mailto:hello@sapphorion.co.za">Send an Email</a>
+        <a class="btn-primary" href="https://wa.me/27633994805" target="_blank" rel="noopener">WhatsApp Me →</a>
+        <a class="btn-outline" href="mailto:sapphorion@gmail.com">Send an Email</a>
       </div>
     </div>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
