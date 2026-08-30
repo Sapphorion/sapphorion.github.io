@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sapphorion — Websites for South African Small Businesses</title>
 <meta name="description" content="Clean, fast, honest websites built locally in Gqeberha, South Africa. Sites from R2,500.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -92,13 +94,18 @@
   }
 
   .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
     font-family: var(--font-display);
     font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 0.01em;
   }
 
-  .logo span { color: var(--brass); }
+  .logo-mark { height: 34px; width: auto; }
+
+  .logo-dot { color: var(--brass); }
 
   .nav-links {
     display: flex;
@@ -429,6 +436,10 @@
     color: var(--slate);
   }
 
+  .footer-brand { display: inline-flex; align-items: center; gap: 10px; }
+
+  .footer-mark { height: 24px; width: auto; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn-primary:hover, form button:hover { transform: none; }
@@ -439,7 +450,10 @@
 
 <header>
   <nav>
-    <div class="logo">Sapphorion<span>.</span></div>
+    <a class="logo" href="#" aria-label="Sapphorion — home">
+      <img src="images/phoenix.png" alt="" class="logo-mark">
+      <span>Sapphorion<span class="logo-dot">.</span></span>
+    </a>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#pricing">Pricing</a>
@@ -567,7 +581,7 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <span>Sapphorion Web Design — Built in Gqeberha, South Africa</span>
+    <span class="footer-brand"><img src="images/phoenix.png" alt="" class="footer-mark">Sapphorion Web Design — Built in Gqeberha, South Africa</span>
     <span>© 2026</span>
   </div>
 </footer>
